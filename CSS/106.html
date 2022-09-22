@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 카카오가 사용하는 방법들 */
+        /*  ir_pm을 사용했을때 브라우저 성능저하가 있는지? X */
+        /* .ir_pm { */
+        /* 1.PC용으로 사용된 이미지내에서 의미있는 텍스트의 대체텍스트를 제공할때 */
+        /* 설정될 요소가 인라인일지 블록레벨일지 모르기때문 */
+        /* display: block;
+            overflow: hidden;
+            Font-size: 1px;
+            line-height: 0;
+            /* text-indent가 블록 레벨 요소에만 적용할 수 있다 */
+        /* text-indent: -9999px;  */
+
+        /* 2.Mobile용으로 사용된 이미지내에서 의미있는 텍스트의 대체텍스트를 제공할때 */
+        /* display: block;
+            overflow: hidden;
+            font-size: 1px;
+            line-height: 0; */
+        /* 투명화 */
+        /* color: transparent; */
+        /* transparent 키워드는 IE9부터 사용 가능하기 때문에 PC에서는 빠져있습니다.
+            https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#transparent */
+
+        /* } */
+
+        /* 3.스크린리더가 읽을 필요는 없지만  마크업 구조상 필요한 경우,
+        width: 0; height: 0; 이면 존재하지 않는 요소라 생각하고 읽지않음
+        읽을 필요가 없는 헤딩을 넣을수밖에없을때 사용  */
+        /* .screen_out {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        } */
+        /* wiatarea 4.중요한 이미지 대체텍스트로 이미지 off 시 에도 대체 텍스트를 보여주고자 할때 사용하고자하는 요소를 따로 감싸줘야함
+         백그라운드에 적용된 이미지 = 이미지폰트 / 이미지스프라이트 기법*/
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%
+        }
+
+
+        /* 네이버가 사용하는 방법 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            background: url("img/photo02.png") 0 0/ contain no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button class="ir_pm">중요합니다!!</button> -->
+    <button>
+        <span class=".blind"> 중요합니다!!</span>
+    </button>
+</body>
+
+</html>

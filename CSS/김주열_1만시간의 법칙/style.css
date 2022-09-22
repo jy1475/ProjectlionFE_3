@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    width: inherit;
+    height: inherit;
+    color: #FFFFFF;
+    background-color: #5b2386;
+}
+
+.header{
+    width: inherit;
+    text-align: center;
+}
+
+.main{
+    font-family: GmarketSansMedium;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+}
+
+.img-tit{
+    position: absolute;
+    width: 564px;
+    height: 112px;
+    left: 678px;
+    top: 273px;  
+}
+
+.img-clook{
+    position: absolute;
+    width: 261px;
+    height: 265px;
+    left: 830px;
+    top: 199px;
+}
+
+.img-txt{
+    position: absolute;
+    width: 486px;
+    height: 40px;
+    left: 717px;
+    top: 510px;
+}
+
+.img-quotes1{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 714px;
+    top: 641px;
+}
+.img-quotes2{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 1161px;
+    top: 641px;
+}
+
+.x{
+    font-size: 23px;
+}
+
+.txt-desc{
+    position: absolute;
+    width: 490px;
+    height: 85px;
+    left: 710px;
+    top: 618px;
+    font-size: 17px;
+    
+}
+
+.tet-wannabe{
+    background: #FFFFFF;
+    border: 100px solid black;
+    border-radius: 10px;
+}
+
+.txt-wannabe{
+    position: absolute;
+    width: 600px;
+    height: 24px;
+    left: 653px;
+    top: 832px;
+    font-size: 24px;
+}
+
+.s{
+    font-size: 72px;
+}
+.w{
+    font-size: 72px;
+}
+
+.txt-time{
+    position: absolute;
+    width: 1000px;
+    height: 24px;
+    left: 458px;
+    top: 916px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+input {
+    font-family: 'Gmarket Sans';
+    text-align: center;
+    width:200px;
+    height:60px;
+    font-size:24px;
+    background: #FFFFFF;
+    border-radius: 7px;
+  }
+.btn-exc{
+    position: absolute;
+    width: 565px;
+    height: 66px;
+    left: 678px;
+    top: 1071px;
+}
+.click{
+    position: absolute;
+    left: 1278px;
+    top: 1091px;
+}
+
+.txt-wannabe2{
+    position: absolute;
+    width: 1000px;
+    height: 24px;
+    left: 453px;
+    top: 1232px;
+    font-size: 24px;
+}
+
+.txt-time2{
+    position: absolute;
+    width: 1000px;
+    height: 24px;
+    left: 453px;
+    top: 1332px;
+    font-size: 24px;
+}
+
+
+.btn-exc{
+    border: 1px solid #5b2386;
+    background-color: #5b2386;
+}
+
+.btn-go{
+    position: absolute;
+    width: 356px;
+    height: 66px;
+    left: 678px;
+    top: 1572px;
+    border: 1px solid #5b2386;
+    background-color: #5b2386;
+}
+
+.btn-share{
+    position: absolute;
+    width: 191px;
+    height: 66px;
+    left: 1052px;
+    top: 1572px;
+    border: 1px solid #5b2386;
+    background-color: #5b2386;
+}
+
+.footer{
+    position: absolute;
+    width: 800px;
+    height: 25px;
+    left: 567px;
+    top: 1768px;
+}
+.txt-footer{
+    position: absolute;
+    width: 800px;
+    height: 25px;
+    left: 0px;
+    bottom: -60px;
+    font-size: 12px;
+}

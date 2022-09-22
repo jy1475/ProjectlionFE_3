@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p::before{
+                content: "이번달 월급은";
+            }
+            p::after{
+                content: "만원";
+            }
+            /* 가상요소선택자는 선택이 안됨 */
+            /* 
+            https://docs.emmet.io/cheat-sheet/
+            css emmet
+            */
+        </style>
+    </head>
+    <body>
+        <!-- 
+            가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리(콜론이 1개입니다.)
+            가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리(콜론이 2개입니다.)
+            가상요소 콜론이 1개만 보이는경우(한개써도 작동을 하기에 주의가 필요) : 레거시브라우저 호환을위한선택
+
+        -->
+        <p>10cm</p>
+        
+    </body>
+</html>
+
+<!-- 
+    3. 가상 요소 선택자
+    ::before ::after
+ -->

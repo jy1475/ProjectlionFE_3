@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 백그라운드에 적용된 이미지 = 이미지폰트 / 이미지스프라이트 기법*/
+        /* 
+        이미지들이 많아질수록 서버에 요청하고 응답하는시간이 길어질수밖에없어 웹페이지 로딩속도가 떨어질수밖에없다.
+        그래서 이미지를 한판에 여러가지 이미지를 붙여넣어서 이미지 하나만 요청해서 불러오면 로딩이 훨씬 빠르다
+        css로 사용할 이미지 좌표를 찾아서 백그라운드 이미지로 보여주는것이 css sprite기법이다.
+        */
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%
+        }
+
+
+        /* 네이버가 사용하는 방법 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            background: url("img/photo02.png") 0 0/ contain no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button class="ir_pm">중요합니다!!</button> -->
+    <button>
+        <span class=".blind"> 중요합니다!!</span>
+    </button>
+</body>
+
+</html>

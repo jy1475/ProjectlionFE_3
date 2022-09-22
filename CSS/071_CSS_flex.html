@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            justify-content: space-between;
+            /* justify-content: space-around; */
+        }
+    
+        .items{
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            border: solid 3px black;
+        }
+    </style>
+</head>
+<body>
+    <!--외부 디스플레이(inline,block,inline-block) 타입 부모와 형제간의 박스백치
+내부 디스플레이(flex, grid 등) 타입 내부자식박스배치  -->
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+</html>
+<!-- 1.3 justify-content -->

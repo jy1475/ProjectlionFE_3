@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 네이버에서 빌려 오는 블라인드클래스를 txt-hide로 이름바꿈 */
+        .txt-hide{
+            position: absolute;
+            /* 요소의 모양을 짤라내는 속성*/
+            clip: rect(0 0 0 0);
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            /* 유틸리티 클래스라고한다*/
+        }
+        /* 가상요소는 디스플레이 속성 기본값이 인라인 */
+        .labl-hold::before{
+            vertical-align: -5px;
+            display: inline-block;
+            /* content가 없으면 가상요소가 존재하지 않는다 */
+            /* 접근성을 위해 content에 이미지를 넣지 않는다 
+            스크린리더가 이미지라고 읽음 백그라운드 이미지로 했을때는 labl안에 값을 읽음 */
+            content: '';
+            /* 이미지 크기로 width, height정함 */
+            width: 22px;
+            height: 22px;
+            background-image: url("img/icon_check_empty.png");
+        }
+        /* inp박스가 선택되었을때 이런 스타일이어야 한다 
+        html 구조상 input뒤에 label은 형제라서 인접 형제선택자 +를 사용 */
+        .inp-hold:checked+.labl-hold::before{
+            /* content: url("img/icon_check.png"); */
+            background-image: url("img/icon_check.png");
+        }
+
+        /* (사용자 접근성을 위해 필요) */
+        .inp-hold:focus+.labl-hold::before{
+            /* focus상태에서 선택하려면 space눌러야한다 enter아님~ */
+            outline: 2px solid black;
+            /* outline은 요소의 바깥선 레이아웃에 영향 미치지않음*/
+            outline-offset: 5px;
+            /* 모양은  border-radius사용가능  */
+            border-radius: 50%;
+            /* border: 2px solid black; */
+            /* border는 박스모델로 레이아웃에 영향을 미침 */
+        }
+    </style>
+</head>
+<body>
+    <!-- input을 숨겨놔서 focus되는 요소가 존재하지 않고있다 -->
+    <!-- a, input, button 포커싱이 되는 요소들이 따로 있다. 
+        사용자입장에서 무엇을보는지 표시를 해주는것이때문에 접근성측면에서 포커싱 되는건 중요하다.   -->
+    <a href=""></a>
+    <input type="text">
+    <button></button>
+    <!-- 부모를 선택하는 가상요소는 없다 자바스크립트 사용 -->
+    <!-- input과 label을 연결하기 위해 id와 for을 같게한다. -->
+    <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+    <label for="inpHold" class="labl-hold">선택하거라</label>
+</body>
+</html>

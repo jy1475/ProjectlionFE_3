@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .item{
+            border: 1px solid black;
+        }
+        /* 숫자는 크기에 따라서만 정렬 순서가 아니다 / 마크업상에서 순서를 변경하고 싶을때 서버와 상관없다 */
+        .item:nth-child(1){
+            order: 1;
+        }
+        .item:nth-child(2){
+            order: 2;
+        }
+        .item:nth-child(3){
+            order: 3;
+        }
+        .item:nth-child(4){
+            order: 4;
+        }
+        /* 크기가 큰 것만 뒤로가는 것이다. */
+        .item:nth-child(5){
+            order: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

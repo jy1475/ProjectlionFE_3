@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            1차원 배열 : flex : 
+            display 속성으로, 내부 자식 박스들의 배치에 영향을 미치는 내부 디스플레이 타입
+            컨텐츠를 정렬하거나 공간을 나눌 수 있는 CSS 속성의 집합
+            2차원 배열 : grid
+        */
+        .container{
+            display: flex;
+            /* flex-direction:row; */
+            /* flex-direction: column; */
+            flex-direction: row-reverse;
+            /* 읽는건 순서대로 보이는건 반대로 */
+        }
+        .items{
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            border: solid 3px black;
+        }
+    </style>
+</head>
+<body>
+    <!--외부 디스플레이(inline,block,inline-block) 타입 부모와 형제간의 박스백치
+내부 디스플레이(flex, grid 등) 타입 내부자식박스배치  -->
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+
+    </div>
+</body>
+</html>
+<!-- 
+    1.1 주축과 정렬 방향
+    1.2 flex-direction  -->
