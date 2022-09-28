@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        video {
+            width: 900px;
+            max-width: calc(100% - 20px);
+            /* 화면을 조절했을 때, max-width의 넓이가 width 보다 크다면 width의 값으로, width의 넓이가 max-width보다 크다면 max-width의 넓이로 조정됩니다.*/
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            /* width: 100vw;
+            height: 100vh; */
+        }
+
+        span {
+            display: block;
+            padding-top: 40%;
+            /* padding-top, padding-bottom 속성의 % 값은 부모 요소의 넓이에 비례합니다. */
+            /* 예를 들어 부모의 넚이가 1200px 이라면 padding-top=50% 의 값은 600px 과 같습니다. */
+            background-color: aqua;
+        }
+
+        cont-video {
+            position: relative;
+            /* padding-top: 56.5%; */
+            /* 종횡비 높이/너비*100  */
+            height: 56.25vh;
+        }
+
+        .video_black {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* right: 0;
+            bottom: 0;  사용이 안됨*/
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        /* 패딩탑부분👇
+
+        padding-top / padding-bottom에서 %단위로 value를 입력하면 부모의 너비를 기준으로 패딩이 계산됩니다.
+
+
+        유튜브 영상 사이즈 계산 문제 👇
+
+        너비는 100%든 뭐든 어떻게 넣는다고 해도 영상의 높이는 어떻게 알 수 있을까요?
+        => 영상의 종횡비를 가지고 계산해서 적절한 값을 넣어주자!
+
+        => 패딩탑 특성 사용하면 %로 영상 사이즈 딱맞게 넣을 수 있겠다~
+        */
+    </style>
+</head>
+
+<body>
+    <!-- <video src="img/nextlevel.mp4" controls></video> -->
+    <!-- <iframe width="765" height="430" src="https://www.youtube.com/embed/jjFSRDUvETQ"
+        title="BLACKPINK(블랙핑크) - Pink Venom @인기가요 inkigayo 20220828" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+    <article class="cont-video">
+        <iframe width="765" height="430" src="https://www.youtube.com/embed/jjFSRDUvETQ"
+            title="BLACKPINK(블랙핑크) - Pink Venom @인기가요 inkigayo 20220828" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen class="video_black"></iframe>
+    </article>
+
+    <article class="cont-video">
+        <div class="video_black">
+        </div>
+        <iframe width="765" height="430" src="https://www.youtube.com/embed/jjFSRDUvETQ"
+            title="BLACKPINK(블랙핑크) - Pink Venom @인기가요 inkigayo 20220828" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen class="video_black"></iframe>
+
+    </article>
+</body>
+
+</html>
