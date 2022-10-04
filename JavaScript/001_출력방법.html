@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        /* 주석 */
+    </style>
+</head>
+
+<body>
+    <!-- 주석 -->
+    <p id="one"></p>
+
+    <script>
+        // about:blank에서 개발자 도구를 열고, console에서 document.이라고 치면 여러가지 document 메서드를 볼 수 있다.
+        //메서드 .(메서드체인잉)은 개행가능
+        /*
+        여
+        러
+        줄
+        주
+        석
+        */
+        document.getElementById("one").innerHTML =
+            "hello <strong>world 1</strong>";
+        console.log("hello world 2");
+        window.alert("hello world 3");
+        document.write("hello world 4");
+    </script>
+    <!-- 
+            견고하다는 표현 5가지
+1. 아규먼트 정합성 판단
+회원가입('hojun','dlghwns123!!')
+회원가입('SQL문','')-회원가입으로 해킹하려는 시도
+회원가입('hojun','')
+이런것들에 대한 테스트가 정확히 되어있는가? 견고하다는 표현을 사용하기 적합
+
+2. 아키텍처
+3. 코드의 구조화
+4. 파일 분기
+5. 예외 처리
+
+콘솔은 꼭 브라우저공간을 이야기하는것은 아님
+         -->
+</body>
+
+</html>
