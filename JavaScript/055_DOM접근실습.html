@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .canvas{
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        margin: 0 auto;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .canvas.red{
+        background-color: red;
+    }
+    .canvas.yellow{
+        background-color: yellow;
+    }
+    .canvas.green{
+        background-color: green;
+    }
+</style>
+<body>
+    <div class="canvas"></div>
+    <ul>
+        <li><button type="button" class="btn-red">빨강</button></li>
+        <li><button type="button" class="btn-yellow">노랑</button></li>
+        <li><button type="button" class="btn-green">초록</button></li>
+    </ul>
+    <script>
+        const canvas = document.querySelector(".canvas");
+        const btnred = document.querySelector('.btn-red');
+        const btnyellow = document.querySelector('.btn-yellow');
+        const btngreen = document.querySelector('.btn-green');
+
+        btnred.addEventListener('click', function(){
+            canvas.classList.remove('yellow', 'green');
+            // canvas.classList.remove('red', 'yellow', 'green'); //전부다 사라져서 add위에 있어야함
+            canvas.classList.add('red');
+            // canvas.classList.toggle('red');
+        })
+        btnyellow.addEventListener('click', function(){
+            canvas.classList.remove('red', 'green');
+            // canvas.classList.remove('red', 'yellow', 'green'); //전부다 사라져서 add위에 있어야함
+            canvas.classList.add('yellow');
+            // canvas.classList.toggle('yellow');
+        })
+        btngreen.addEventListener('click', function(){
+            canvas.classList.remove('yellow', 'red');
+            // canvas.classList.remove('red', 'yellow', 'green'); //전부다 사라져서 add위에 있어야함
+            canvas.classList.add('green');
+            // canvas.classList.toggle('green');
+        })
+
+        
+        //조건문
+        // btnred.addEventListener('click', function(){
+        //     canvas.classList = "";
+        //     if (canvas.classList.contains('yellow')){
+        //         canvas.classList.remove('yellow');
+        //     }
+        //     if (canvas.classList.contains('green')){
+        //         canvas.classList.remove('green');
+        //     }
+        //     canvas.classList.add('red');
+        // })
+
+        //조건문 2
+        // btnred.addEventListener('click', function(){
+        //     canvas.classList = "";
+        //     // || 파이프연산자 첫번째 트루씨값 반환
+        //     // && 엔드연산자 마지막 펄씨값 반환
+        //     if (canvas.classList.contains('yellow') || canvas.classList.contains('green')){
+        //         canvas.classList.remove('yellow', 'green');
+        //     }
+        //     canvas.classList.add('red');
+        // })
+
+        //반복문
+        const btnArr = [btnRed, btnYellow, btnGreen];
+        //for(let i=0; i<btnArr.length; i++){}
+        btnArr.forEach(item => {
+            item.addEventListener('click', () => {
+                canvas.classList.remove('red', 'yellow', 'green');
+                if (item.classList.contains("btn-red")) {
+                    canvas.classList.add('red');
+                } else if (item.classList.contains("btn-yellow")) {
+                    canvas.classList.add('yellow');
+                } else if (item.classList.contains("btn-green")) {
+                    canvas.classList.add('green');
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
