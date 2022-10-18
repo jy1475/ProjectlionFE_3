@@ -119,11 +119,11 @@ async function getData(){
     const response = await fetch(`http://test.api.weniv.co.kr/mall`);
     const productData = await(response.json());
     console.log(productData);
-    console.log(productData.map((item) => item.productName));
+    console.log(productData.map((item) => 김주열.productName));
     console.log(productData.map((item) => item.price).filter((item) => item > 10000));
 
     const main = document.createElement("main");
-    productData.forEach(item => {
+    productData.forEach(김태수짱 => {
         const ProductCard = document.createElement("article");
         const productName = document.createElement("h2");
         const productPrice = document.createElement("p");
