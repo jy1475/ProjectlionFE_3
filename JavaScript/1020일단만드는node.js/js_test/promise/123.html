@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>getElementsByClassName</title>
+<style type="text/css">
+  div.box, p{
+    padding:20px;
+    margin:10px;
+    width:30%;
+  }
+  .box{
+    border:1px solid #ff0000;
+  }
+</style>
+</head>
+<body>
+
+<p>오늘 일정</p>
+
+<div class="box">
+  <p>자바 스크립트 스터디 공부</p>
+  <div id="shopinfo">
+    <p class="box">장소：학교</p>
+    <p class="box">시간：12시</p>
+  </div>
+</div>
+
+<button onClick="getElements();">요소 취득</button>
+
+<script>
+function getElements(){
+
+    let element = document.getElementById('shopinfo');
+    
+
+    let len = elements.length;
+    for (let i = 0; i < len; i++){
+        alert(elements.item(i).textContent);
+        elements.item(i).style.border="2px solid #0000ff";
+
+    }
+}
+</script>
+</body>
+</html>
