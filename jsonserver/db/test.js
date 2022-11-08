@@ -32,9 +32,9 @@ const data = {
 };
 
 fetch("http://localhost:3001/product", {
-method: "POST",
-headers: { "Content-Type": "application/json" },
-body: JSON.stringify(data),
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
 })
 .then((response) => response.json())
 .then((data) => {
