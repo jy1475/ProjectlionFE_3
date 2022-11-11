@@ -5,6 +5,7 @@
         <title>리액트 1분만에 추가해보기!</title>
     </head>
     <body>
+        <h1>hello world</h1>
         <div id="root"></div>
         <script
             src="https://unpkg.com/react@17/umd/react.development.js"
@@ -16,31 +17,33 @@
         ></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script type="text/babel">
-            function ImageSlide() {
-                return <img src="jeju.jpg" width="300px" />;
+            function f() {
+                return 100;
             }
 
-            function Title() {
-                return <h1>jeju도에 명소 weniv</h1>;
+            function 게시판() {
+                return <h2>게시판</h2>;
             }
 
-            function Info() {
-                return <p>100km 거리</p>;
+            function 로그인() {
+                return <h2>로그인</h2>;
             }
 
-            function Price() {
-                return <p>100000</p>;
-            }
+            const login = true;
 
             const app = (
                 <div>
-                    <ImageSlide />
-                    <Title />
-                    <Info />
-                    <Price />
+                    {f()}
+                    {console.log("hello")}
+                    {1 + 1}
+                    {"hello" + "world"}
+                    {"<br/>"}
+                    <br />
+                    {"hello" + "world2"}
+                    {true ? "one" : "two"}
+                    {login ? <게시판 /> : <로그인 />}
                 </div>
             );
-
             const domContainer = document.querySelector("#root");
             ReactDOM.render(app, domContainer);
         </script>
